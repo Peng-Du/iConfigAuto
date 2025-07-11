@@ -21,10 +21,16 @@ logging.basicConfig(
     ]
 )
 
+import argparse
+
 def get_config():
-    """Reads hierarchical configuration from Config.txt."""
+    """Reads hierarchical configuration from a command-line specified file."""
+    parser = argparse.ArgumentParser(description='Automated iConfig Configuration.')
+    parser.add_argument('config_file', nargs='?', default='Config.txt', help='Path to the configuration file (default: Config.txt)')
+    args = parser.parse_args()
+
     config = {'products': {}}
-    with open('Config.txt', 'r', encoding='utf-8') as f:
+    with open(args.config_file, 'r', encoding='utf-8') as f:
         page_context = None
         current_product = None
         for line in f:
@@ -215,20 +221,20 @@ def main():
         for product_name, product_data in config.get('products', {}).items():
             quantity = product_data['quantity']
             accessories = product_data.get('accessories', {})
-            is_parts_type = product_name.startswith('WA')
-            is_standard_type = product_name.startswith(('S', 'F'))
+            is_standard_type = product_name.startswith(('S', 'F', 'R'))
+            is_parts_type = product_name.startswith(('WA', 'SFP', 'QSFP'))
 
-            if is_standard_type:
-                logging.info(f"Product {product_name} is a 'Standard' type. Clicking 'Standard' tab.")
-                if not click_tab_with_retry(driver, wait, "normCfg", "Standard"):
-                    continue
-            elif is_parts_type:
+            if is_parts_type:
                 logging.info(f"Product {product_name} is a 'Parts' type. Clicking 'Parts' tab.")
                 if not click_tab_with_retry(driver, wait, "partsCfg", "Parts"):
                     continue
-            else:
-                logging.warning(f"Product {product_name} has an unknown type. Assuming 'Standard' and proceeding.")
+            elif is_standard_type:
+                logging.info(f"Product {product_name} is a 'Standard' type. Clicking 'Standard' tab.")
                 if not click_tab_with_retry(driver, wait, "normCfg", "Standard"):
+                    continue
+            else:
+                logging.warning(f"Product {product_name} has an unknown type. Assuming 'Parts' and proceeding.")
+                if not click_tab_with_retry(driver, wait, "normCfg", "Parts"):
                     continue
 
             time.sleep(2) # Wait for tab content to load
