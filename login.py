@@ -431,13 +431,35 @@ def main():
 
                                     # 2. 根据item_tr_id判断使用弹出菜单还是直接输入
                                     try:
-                                        # 判断item_tr_id是否包含'License'，以决定处理方式
-                                        if 'License' in item_tr_id:
-                                            # 直接输入方式
-                                            logging.info(f"'{item_tr_id}' contains 'License', using direct input method.")
+                                        # 尝试弹出菜单方式，如果失败则尝试直接输入
+                                        logging.info(f"'{item_tr_id}' does not contain 'License', trying popup menu first.")
+                                        popup_menu_success = False
+                                        try:
+                                            # 等待弹出菜单出现
+                                            popup_menu_xpath = f"//div[@id='action_div' and contains(@class, 'popup-menu')]//a[text()='{acc_qty}']"
+                                            target_option = WebDriverWait(driver, 3).until(
+                                                EC.element_to_be_clickable((By.XPATH, popup_menu_xpath))
+                                            )
+                                            
+                                            # 点击目标选项
+                                            target_option.click()
+                                            logging.info(f"Successfully clicked popup menu option '{acc_qty}'")
+                                            popup_menu_success = True
+                                            
+                                            # 发送Enter键确认
+                                            from selenium.webdriver.common.keys import Keys
+                                            target_option.send_keys(Keys.ENTER)
+                                            logging.info("Sent Enter key to confirm popup menu selection")
+                                            
+                                        except Exception as e:
+                                            logging.info(f"Popup menu approach failed: {e}. Trying direct input instead.")
+                                        
+                                        # 如果弹出菜单方式失败，尝试直接输入
+                                        if not popup_menu_success:
+                                            logging.info(f"Switching to direct input for quantity '{acc_qty}'...")
                                             
                                             # 终极方法V2：通过获取活动元素来定位输入框
-                                            logging.info(f"'{item_tr_id}' contains 'License', using active element strategy.")
+                                            logging.info(f"Switching to active element strategy for quantity '{acc_qty}'...")
                                             time.sleep(1) # 等待JS创建input并聚焦
 
                                             # 1. 直接获取当前页面的活动元素
@@ -455,72 +477,16 @@ def main():
                                                 input.dispatchEvent(event_change);
                                                 """
                                                 driver.execute_script(js_script, quantity_input, str(acc_qty))
-                                                logging.info(f"Set quantity to '{acc_qty}' and dispatched events for License item.")
+                                                logging.info(f"Set quantity to '{acc_qty}' and dispatched events.")
                                                 time.sleep(0.5)
 
                                                 # 3. 发送Enter键确认
                                                 from selenium.webdriver.common.keys import Keys
                                                 quantity_input.send_keys(Keys.ENTER)
-                                                logging.info("Sent Enter key to finalize input for License item.")
+                                                logging.info("Sent Enter key to finalize input.")
                                             else:
                                                 raise Exception("Failed to get active element or it was not an input field.")
-                                        else:
-                                            # 尝试弹出菜单方式，如果失败则尝试直接输入
-                                            logging.info(f"'{item_tr_id}' does not contain 'License', trying popup menu first.")
-                                            popup_menu_success = False
-                                            try:
-                                                # 等待弹出菜单出现
-                                                popup_menu_xpath = f"//div[@id='action_div' and contains(@class, 'popup-menu')]//a[text()='{acc_qty}']"
-                                                target_option = WebDriverWait(driver, 3).until(
-                                                    EC.element_to_be_clickable((By.XPATH, popup_menu_xpath))
-                                                )
-                                                
-                                                # 点击目标选项
-                                                target_option.click()
-                                                logging.info(f"Successfully clicked popup menu option '{acc_qty}'")
-                                                popup_menu_success = True
-                                                
-                                                # 发送Enter键确认
-                                                from selenium.webdriver.common.keys import Keys
-                                                target_option.send_keys(Keys.ENTER)
-                                                logging.info("Sent Enter key to confirm popup menu selection")
-                                                
-                                            except Exception as e:
-                                                logging.info(f"Popup menu approach failed: {e}. Trying direct input instead.")
-                                            
-                                            # 如果弹出菜单方式失败，尝试直接输入
-                                            if not popup_menu_success:
-                                                logging.info(f"Switching to direct input for quantity '{acc_qty}'...")
-                                                
-                                                # 终极方法V2：通过获取活动元素来定位输入框
-                                                logging.info(f"Switching to active element strategy for quantity '{acc_qty}'...")
-                                                time.sleep(1) # 等待JS创建input并聚焦
-
-                                                # 1. 直接获取当前页面的活动元素
-                                                quantity_input = driver.switch_to.active_element
-                                                if quantity_input and quantity_input.tag_name == 'input':
-                                                    logging.info(f"Successfully got active element: {quantity_input.get_attribute('outerHTML')}")
-                                                    # 2. 使用JS设值并触发事件
-                                                    js_script = """
-                                                    var input = arguments[0];
-                                                    var value = arguments[1];
-                                                    input.value = value;
-                                                    var event_input = new Event('input', { bubbles: true });
-                                                    var event_change = new Event('change', { bubbles: true });
-                                                    input.dispatchEvent(event_input);
-                                                    input.dispatchEvent(event_change);
-                                                    """
-                                                    driver.execute_script(js_script, quantity_input, str(acc_qty))
-                                                    logging.info(f"Set quantity to '{acc_qty}' and dispatched events.")
-                                                    time.sleep(0.5)
-
-                                                    # 3. 发送Enter键确认
-                                                    from selenium.webdriver.common.keys import Keys
-                                                    quantity_input.send_keys(Keys.ENTER)
-                                                    logging.info("Sent Enter key to finalize input.")
-                                                else:
-                                                    raise Exception("Failed to get active element or it was not an input field.")
-                                        
+                                    
                                         # 等待行变为selected状态以确认操作成功
                                         WebDriverWait(driver, 5).until(
                                             lambda d: 'selected' in d.find_element(By.XPATH, f"//tr[@id='{item_tr_id}']").get_attribute('class')
