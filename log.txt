@@ -1,0 +1,277 @@
+2025-07-11 20:06:31,824 - INFO - ====== WebDriver manager ======
+2025-07-11 20:06:45,476 - INFO - Get LATEST chromedriver version for google-chrome
+2025-07-11 20:06:45,522 - INFO - Get LATEST chromedriver version for google-chrome
+2025-07-11 20:06:45,555 - INFO - Driver [C:\Users\d01054\.wdm\drivers\chromedriver\win64\138.0.7204.94\chromedriver-win32/chromedriver.exe] found in cache
+2025-07-11 20:06:46,945 - INFO - Opening login page...
+2025-07-11 20:06:49,874 - INFO - Selecting language...
+2025-07-11 20:06:50,536 - INFO - Language selected: English
+2025-07-11 20:06:50,536 - INFO - Clicking 'H3C user' tab...
+2025-07-11 20:06:50,598 - INFO - 'H3C user' tab clicked.
+2025-07-11 20:06:50,610 - INFO - Entering credentials...
+2025-07-11 20:06:50,724 - INFO - Credentials entered.
+2025-07-11 20:06:50,725 - INFO - Clicking login button...
+2025-07-11 20:06:51,255 - INFO - Login successful!
+2025-07-11 20:06:53,601 - INFO - Browser window maximized.
+2025-07-11 20:06:53,601 - INFO - Waiting 10 seconds for page to load after login...
+2025-07-11 20:07:03,603 - INFO - Attempting to click Quotation menu...
+2025-07-11 20:07:03,636 - INFO - Clicked the Quotation menu.
+2025-07-11 20:07:13,637 - INFO - Waiting for 'New' button...
+2025-07-11 20:07:15,296 - INFO - Clicked 'New' button.
+2025-07-11 20:07:22,526 - INFO - Entered Quotation name: Test Server01
+2025-07-11 20:07:22,526 - INFO - Clicking country dropdown...
+2025-07-11 20:07:22,750 - INFO - Selecting country: Spain
+2025-07-11 20:07:22,844 - INFO - Selected Country: Spain
+2025-07-11 20:07:22,934 - INFO - Selected 'Is U.S. ECCN needed': No
+2025-07-11 20:07:22,934 - INFO - Basic information filled.
+2025-07-11 20:07:22,935 - INFO - Clicking 'Save' button...
+2025-07-11 20:07:23,016 - INFO - Clicked 'Save' button.
+2025-07-11 20:07:25,017 - INFO - Clicking 'Configuration' tab...
+2025-07-11 20:07:25,367 - INFO - Clicked 'Configuration' tab.
+2025-07-11 20:07:35,368 - WARNING - Product UN-R4900-G6-LFF-C has an unknown type. Assuming 'Parts' and proceeding.
+2025-07-11 20:07:37,810 - INFO - Successfully clicked 'Parts' tab on attempt 1.
+2025-07-11 20:07:39,812 - INFO - Adding product UN-R4900-G6-LFF-C...
+2025-07-11 20:07:39,812 - INFO - Searching for product: UN-R4900-G6-LFF-C
+2025-07-11 20:07:40,005 - INFO - Search button clicked.
+2025-07-11 20:07:43,057 - INFO - Captured Product Code for Standard type: 0235A4HD
+2025-07-11 20:07:43,058 - INFO - Selecting checkbox for UN-R4900-G6-LFF-C
+2025-07-11 20:07:43,111 - INFO - Product checkbox selected.
+2025-07-11 20:07:43,112 - INFO - Clicking 'Add' button.
+2025-07-11 20:07:43,171 - INFO - 'Add' button clicked.
+2025-07-11 20:07:43,172 - INFO - Clicking 'OK' button.
+2025-07-11 20:07:43,229 - INFO - 'OK' button clicked.
+2025-07-11 20:07:46,231 - INFO - Finding row for standard product code 0235A4HD to edit.
+2025-07-11 20:07:47,327 - INFO - Clicked 'Edit' for the last added product.
+2025-07-11 20:07:49,433 - INFO - Set 'Config name' to 'UN-R4900-G6-LFF-C'.
+2025-07-11 20:07:49,494 - INFO - Set 'Sets' to '6'.
+2025-07-11 20:07:49,546 - INFO - Clicked 'OK' in the group editing dialog.
+2025-07-11 20:07:49,547 - INFO - Entering detail page for UN-R4900-G6-LFF-C to add accessories.
+2025-07-11 20:07:50,976 - INFO - Clicked product name to enter detail page.
+2025-07-11 20:07:55,977 - INFO - On Components page, looking for link ending with '#1'.
+2025-07-11 20:07:56,296 - INFO - Clicked the switch link ending with '#1'.
+2025-07-11 20:07:56,296 - INFO - Waiting for accessory page to load...
+2025-07-11 20:08:03,053 - INFO - Accessory page loaded.
+2025-07-11 20:08:03,053 - INFO - Waiting for 'Expand all' button to be clickable.
+2025-07-11 20:08:03,661 - INFO - Clicked 'Expand all'.
+2025-07-11 20:08:05,663 - INFO - Processing accessory: 'UN-CPU-INTEL-4514Y'. Will select max value from dropdown or use configured quantity '1'.
+2025-07-11 20:08:05,664 - INFO - Waiting for accessory row: UN-CPU-INTEL-4514Y
+2025-07-11 20:08:05,695 - INFO - Found accessory row for UN-CPU-INTEL-4514Y with id: item_tr_0231AMMD_processorDimm_processorSlots
+2025-07-11 20:08:07,717 - INFO - Trying quantity cell xpath: //tr[@id='item_tr_0231AMMD_processorDimm_processorSlots']//td[contains(@class, 'item_qty')]
+2025-07-11 20:08:07,750 - INFO - Found quantity cell using xpath: //tr[@id='item_tr_0231AMMD_processorDimm_processorSlots']//td[contains(@class, 'item_qty')]
+2025-07-11 20:08:07,752 - INFO - Attempting to click quantity cell for 'UN-CPU-INTEL-4514Y' with ActionChains.
+2025-07-11 20:08:08,086 - INFO - ActionChains click on quantity cell successful.
+2025-07-11 20:08:09,115 - INFO - Row item_tr_0231AMMD_processorDimm_processorSlots is now in editing state
+2025-07-11 20:08:09,115 - INFO - 'item_tr_0231AMMD_processorDimm_processorSlots' does not contain 'License', trying popup menu first.
+2025-07-11 20:08:09,216 - INFO - Successfully clicked popup menu option '1'
+2025-07-11 20:08:09,227 - INFO - Popup menu approach failed: Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=138.0.7204.98); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x8b44a3+62419]
+	GetHandleVerifier [0x0x8b44e4+62484]
+	(No symbol) [0x0x6f2133]
+	(No symbol) [0x0x6f8909]
+	(No symbol) [0x0x6fac7a]
+	(No symbol) [0x0x6facf7]
+	(No symbol) [0x0x73b59a]
+	(No symbol) [0x0x73b621]
+	(No symbol) [0x0x733063]
+	(No symbol) [0x0x75f46c]
+	(No symbol) [0x0x730054]
+	(No symbol) [0x0x75f6e4]
+	(No symbol) [0x0x78087a]
+	(No symbol) [0x0x75f266]
+	(No symbol) [0x0x72e852]
+	(No symbol) [0x0x72f6f4]
+	GetHandleVerifier [0x0xb24793+2619075]
+	GetHandleVerifier [0x0xb1fbaa+2599642]
+	GetHandleVerifier [0x0x8db04a+221050]
+	GetHandleVerifier [0x0x8cb2c8+156152]
+	GetHandleVerifier [0x0x8d1c7d+183213]
+	GetHandleVerifier [0x0x8bc388+94904]
+	GetHandleVerifier [0x0x8bc512+95298]
+	GetHandleVerifier [0x0x8a766a+9626]
+	BaseThreadInitThunk [0x0x75d9fcc9+25]
+	RtlGetAppContainerNamedObjectPath [0x0x773e80ce+286]
+	RtlGetAppContainerNamedObjectPath [0x0x773e809e+238]
+. Trying direct input instead.
+2025-07-11 20:08:10,689 - INFO - Row item_tr_0231AMMD_processorDimm_processorSlots is now in selected state, confirming quantity update
+2025-07-11 20:08:10,689 - INFO - Waiting for row to become selected: //tr[contains(@class, 'item_tr') and .//td[.//span[normalize-space(text())='UN-CPU-INTEL-4514Y']]][contains(@class, 'selected')]
+2025-07-11 20:08:10,707 - INFO - Successfully selected quantity for 'UN-CPU-INTEL-4514Y'.
+2025-07-11 20:08:11,708 - INFO - Processing accessory: 'UN-DDR5-5600B-32G-2Rx8-R-2'. Will select max value from dropdown or use configured quantity '2'.
+2025-07-11 20:08:11,709 - INFO - Waiting for accessory row: UN-DDR5-5600B-32G-2Rx8-R-2
+2025-07-11 20:08:11,740 - INFO - Found accessory row for UN-DDR5-5600B-32G-2Rx8-R-2 with id: item_tr_0231AMM1_processorDimm_memorySlots
+2025-07-11 20:08:13,749 - INFO - Trying quantity cell xpath: //tr[@id='item_tr_0231AMM1_processorDimm_memorySlots']//td[contains(@class, 'item_qty')]
+2025-07-11 20:08:13,788 - INFO - Found quantity cell using xpath: //tr[@id='item_tr_0231AMM1_processorDimm_memorySlots']//td[contains(@class, 'item_qty')]
+2025-07-11 20:08:13,788 - INFO - Attempting to click quantity cell for 'UN-DDR5-5600B-32G-2Rx8-R-2' with ActionChains.
+2025-07-11 20:08:14,090 - INFO - ActionChains click on quantity cell successful.
+2025-07-11 20:08:15,116 - INFO - Row item_tr_0231AMM1_processorDimm_memorySlots is now in editing state
+2025-07-11 20:08:15,116 - INFO - 'item_tr_0231AMM1_processorDimm_memorySlots' does not contain 'License', trying popup menu first.
+2025-07-11 20:08:18,224 - INFO - Popup menu approach failed: Message: 
+Stacktrace:
+	GetHandleVerifier [0x0x8b44a3+62419]
+	GetHandleVerifier [0x0x8b44e4+62484]
+	(No symbol) [0x0x6f2133]
+	(No symbol) [0x0x73a8fe]
+	(No symbol) [0x0x73ac9b]
+	(No symbol) [0x0x783052]
+	(No symbol) [0x0x75f4b4]
+	(No symbol) [0x0x78087a]
+	(No symbol) [0x0x75f266]
+	(No symbol) [0x0x72e852]
+	(No symbol) [0x0x72f6f4]
+	GetHandleVerifier [0x0xb24793+2619075]
+	GetHandleVerifier [0x0xb1fbaa+2599642]
+	GetHandleVerifier [0x0x8db04a+221050]
+	GetHandleVerifier [0x0x8cb2c8+156152]
+	GetHandleVerifier [0x0x8d1c7d+183213]
+	GetHandleVerifier [0x0x8bc388+94904]
+	GetHandleVerifier [0x0x8bc512+95298]
+	GetHandleVerifier [0x0x8a766a+9626]
+	BaseThreadInitThunk [0x0x75d9fcc9+25]
+	RtlGetAppContainerNamedObjectPath [0x0x773e80ce+286]
+	RtlGetAppContainerNamedObjectPath [0x0x773e809e+238]
+. Trying direct input instead.
+2025-07-11 20:08:18,226 - INFO - Switching to direct input for quantity '2'...
+2025-07-11 20:08:18,227 - INFO - Switching to active element strategy for quantity '2'...
+2025-07-11 20:08:19,251 - INFO - Successfully got active element: <input id="popup_textbox" class="autocomplete_input" style="top: 657.5px; left: 1556.34px; width: 81px; height: 50px;">
+2025-07-11 20:08:19,273 - INFO - Set quantity to '2' and dispatched events.
+2025-07-11 20:08:19,789 - ERROR - Failed to select quantity for 'UN-DDR5-5600B-32G-2Rx8-R-2': Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=138.0.7204.98); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x8b44a3+62419]
+	GetHandleVerifier [0x0x8b44e4+62484]
+	(No symbol) [0x0x6f2133]
+	(No symbol) [0x0x6f8909]
+	(No symbol) [0x0x6fac7a]
+	(No symbol) [0x0x6facf7]
+	(No symbol) [0x0x73b59a]
+	(No symbol) [0x0x73b621]
+	(No symbol) [0x0x733063]
+	(No symbol) [0x0x75f46c]
+	(No symbol) [0x0x730054]
+	(No symbol) [0x0x75f6e4]
+	(No symbol) [0x0x78087a]
+	(No symbol) [0x0x75f266]
+	(No symbol) [0x0x72e852]
+	(No symbol) [0x0x72f6f4]
+	GetHandleVerifier [0x0xb24793+2619075]
+	GetHandleVerifier [0x0xb1fbaa+2599642]
+	GetHandleVerifier [0x0x8db04a+221050]
+	GetHandleVerifier [0x0x8cb2c8+156152]
+	GetHandleVerifier [0x0x8d1c7d+183213]
+	GetHandleVerifier [0x0x8bc388+94904]
+	GetHandleVerifier [0x0x8bc512+95298]
+	GetHandleVerifier [0x0x8a766a+9626]
+	BaseThreadInitThunk [0x0x75d9fcc9+25]
+	RtlGetAppContainerNamedObjectPath [0x0x773e80ce+286]
+	RtlGetAppContainerNamedObjectPath [0x0x773e809e+238]
+
+2025-07-11 20:08:19,938 - INFO - Processing accessory: 'UN-DUMMY-DIMM-DDR5-M'. Will select max value from dropdown or use configured quantity '30'.
+2025-07-11 20:08:19,938 - INFO - Waiting for accessory row: UN-DUMMY-DIMM-DDR5-M
+2025-07-11 20:08:19,964 - INFO - Found accessory row for UN-DUMMY-DIMM-DDR5-M with id: item_tr_0231AK76_processorDimm_MemDummyOption
+2025-07-11 20:08:21,974 - INFO - Trying quantity cell xpath: //tr[@id='item_tr_0231AK76_processorDimm_MemDummyOption']//td[contains(@class, 'item_qty')]
+2025-07-11 20:08:22,003 - INFO - Found quantity cell using xpath: //tr[@id='item_tr_0231AK76_processorDimm_MemDummyOption']//td[contains(@class, 'item_qty')]
+2025-07-11 20:08:22,003 - INFO - Attempting to click quantity cell for 'UN-DUMMY-DIMM-DDR5-M' with ActionChains.
+2025-07-11 20:08:22,305 - INFO - ActionChains click on quantity cell successful.
+2025-07-11 20:08:23,339 - INFO - Row item_tr_0231AK76_processorDimm_MemDummyOption is now in editing state
+2025-07-11 20:08:23,339 - INFO - 'item_tr_0231AK76_processorDimm_MemDummyOption' does not contain 'License', trying popup menu first.
+2025-07-11 20:08:26,462 - INFO - Popup menu approach failed: Message: 
+Stacktrace:
+	GetHandleVerifier [0x0x8b44a3+62419]
+	GetHandleVerifier [0x0x8b44e4+62484]
+	(No symbol) [0x0x6f2133]
+	(No symbol) [0x0x73a8fe]
+	(No symbol) [0x0x73ac9b]
+	(No symbol) [0x0x783052]
+	(No symbol) [0x0x75f4b4]
+	(No symbol) [0x0x78087a]
+	(No symbol) [0x0x75f266]
+	(No symbol) [0x0x72e852]
+	(No symbol) [0x0x72f6f4]
+	GetHandleVerifier [0x0xb24793+2619075]
+	GetHandleVerifier [0x0xb1fbaa+2599642]
+	GetHandleVerifier [0x0x8db04a+221050]
+	GetHandleVerifier [0x0x8cb2c8+156152]
+	GetHandleVerifier [0x0x8d1c7d+183213]
+	GetHandleVerifier [0x0x8bc388+94904]
+	GetHandleVerifier [0x0x8bc512+95298]
+	GetHandleVerifier [0x0x8a766a+9626]
+	BaseThreadInitThunk [0x0x75d9fcc9+25]
+	RtlGetAppContainerNamedObjectPath [0x0x773e80ce+286]
+	RtlGetAppContainerNamedObjectPath [0x0x773e809e+238]
+. Trying direct input instead.
+2025-07-11 20:08:26,465 - INFO - Switching to direct input for quantity '30'...
+2025-07-11 20:08:26,466 - INFO - Switching to active element strategy for quantity '30'...
+2025-07-11 20:08:27,493 - INFO - Successfully got active element: <input id="popup_textbox" class="autocomplete_input" style="top: 1076.5px; left: 1556.34px; width: 81px; height: 50px;">
+2025-07-11 20:08:27,514 - INFO - Set quantity to '30' and dispatched events.
+2025-07-11 20:08:28,032 - ERROR - Failed to select quantity for 'UN-DUMMY-DIMM-DDR5-M': Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=138.0.7204.98); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x8b44a3+62419]
+	GetHandleVerifier [0x0x8b44e4+62484]
+	(No symbol) [0x0x6f2133]
+	(No symbol) [0x0x6f8909]
+	(No symbol) [0x0x6fac7a]
+	(No symbol) [0x0x6facf7]
+	(No symbol) [0x0x73b59a]
+	(No symbol) [0x0x73b621]
+	(No symbol) [0x0x733063]
+	(No symbol) [0x0x75f46c]
+	(No symbol) [0x0x730054]
+	(No symbol) [0x0x75f6e4]
+	(No symbol) [0x0x78087a]
+	(No symbol) [0x0x75f266]
+	(No symbol) [0x0x72e852]
+	(No symbol) [0x0x72f6f4]
+	GetHandleVerifier [0x0xb24793+2619075]
+	GetHandleVerifier [0x0xb1fbaa+2599642]
+	GetHandleVerifier [0x0x8db04a+221050]
+	GetHandleVerifier [0x0x8cb2c8+156152]
+	GetHandleVerifier [0x0x8d1c7d+183213]
+	GetHandleVerifier [0x0x8bc388+94904]
+	GetHandleVerifier [0x0x8bc512+95298]
+	GetHandleVerifier [0x0x8a766a+9626]
+	BaseThreadInitThunk [0x0x75d9fcc9+25]
+	RtlGetAppContainerNamedObjectPath [0x0x773e80ce+286]
+	RtlGetAppContainerNamedObjectPath [0x0x773e809e+238]
+
+2025-07-11 20:08:28,191 - INFO - Finished configuring accessories. Returning to main configuration page.
+2025-07-11 20:08:28,191 - INFO - Step 3: Saving configuration...
+2025-07-11 20:08:29,505 - ERROR - Error clicking save button: Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=138.0.7204.98); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x8b44a3+62419]
+	GetHandleVerifier [0x0x8b44e4+62484]
+	(No symbol) [0x0x6f2133]
+	(No symbol) [0x0x6f8909]
+	(No symbol) [0x0x6fac7a]
+	(No symbol) [0x0x6facf7]
+	(No symbol) [0x0x740b72]
+	(No symbol) [0x0x73effa]
+	(No symbol) [0x0x73cb57]
+	(No symbol) [0x0x73be14]
+	(No symbol) [0x0x7305c5]
+	(No symbol) [0x0x75f46c]
+	(No symbol) [0x0x730054]
+	(No symbol) [0x0x75f6e4]
+	(No symbol) [0x0x78087a]
+	(No symbol) [0x0x75f266]
+	(No symbol) [0x0x72e852]
+	(No symbol) [0x0x72f6f4]
+	GetHandleVerifier [0x0xb24793+2619075]
+	GetHandleVerifier [0x0xb1fbaa+2599642]
+	GetHandleVerifier [0x0x8db04a+221050]
+	GetHandleVerifier [0x0x8cb2c8+156152]
+	GetHandleVerifier [0x0x8d1c7d+183213]
+	GetHandleVerifier [0x0x8bc388+94904]
+	GetHandleVerifier [0x0x8bc512+95298]
+	GetHandleVerifier [0x0x8a766a+9626]
+	BaseThreadInitThunk [0x0x75d9fcc9+25]
+	RtlGetAppContainerNamedObjectPath [0x0x773e80ce+286]
+	RtlGetAppContainerNamedObjectPath [0x0x773e809e+238]
+
+2025-07-11 20:08:29,506 - INFO - Step 4: Returning to main list...
+2025-07-11 20:08:29,977 - INFO - Successfully clicked back button.
+2025-07-11 20:08:30,120 - INFO - Confirmation dialog appeared and 'Yes' was clicked.
+2025-07-11 20:08:30,120 - INFO - Returned to main list
+2025-07-11 20:08:32,121 - INFO - Finished processing product: UN-R4900-G6-LFF-C.
+2025-07-11 20:08:42,123 - INFO - Closing the browser.

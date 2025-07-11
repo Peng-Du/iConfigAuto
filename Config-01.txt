@@ -1,7 +1,7 @@
 Page 1: Set basic information
-Quotation name: Test Default
+Quotation name: Test B01
 Country: Spain
 Is U.S. ECCN needed: No
 
 Page 2: Configuration
-S5130S-28P-PWR-EI		4pcs
+SFP-XG-SX-MM850-A		6pcs

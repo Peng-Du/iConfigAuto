@@ -554,21 +554,15 @@ def main():
                         
                         # 保存配置
                         logging.info("Step 3: Saving configuration...")
-                        for attempt in range(3):
-                            try:
-                                save_button = WebDriverWait(driver, 10).until(
-                                    EC.element_to_be_clickable((By.ID, "h3c_save_config"))
-                                )
-                                save_button.click()
-                                logging.info("Successfully clicked save button")
-                                time.sleep(2)  # 等待保存完成
-                                break  # Exit loop if successful
-                            except StaleElementReferenceException:
-                                logging.warning(f"Save button became stale. Retrying... (Attempt {attempt + 1})")
-                                time.sleep(1)
-                            except Exception as e:
-                                logging.error(f"Error clicking save button on attempt {attempt + 1}: {e}")
-                                break
+                        try:
+                            save_button = WebDriverWait(driver, 10).until(
+                                EC.element_to_be_clickable((By.ID, "h3c_save_config"))
+                            )
+                            save_button.click()
+                            logging.info("Successfully clicked save button")
+                            time.sleep(2)  # 等待保存完成
+                        except Exception as e:
+                            logging.error(f"Error clicking save button: {e}")
                         
                         # 返回主列表
                         logging.info("Step 4: Returning to main list...")
@@ -577,8 +571,20 @@ def main():
                                 EC.element_to_be_clickable((By.ID, "back_list"))
                             )
                             back_button.click()
-                            logging.info("Successfully clicked back button, returned to main list")
-                            time.sleep(2)  # 等待页面加载
+                            logging.info("Successfully clicked back button.")
+
+                            # Check for and handle the confirmation dialog
+                            try:
+                                confirm_yes_button = WebDriverWait(driver, 3).until(
+                                    EC.element_to_be_clickable((By.ID, "_confirm_yes"))
+                                )
+                                confirm_yes_button.click()
+                                logging.info("Confirmation dialog appeared and 'Yes' was clicked.")
+                            except TimeoutException:
+                                logging.info("Confirmation dialog did not appear.")
+
+                            logging.info("Returned to main list")
+                            time.sleep(2)  # Wait for page to load
                         except Exception as e:
                             logging.error(f"Error clicking back button: {e}")
                             raise

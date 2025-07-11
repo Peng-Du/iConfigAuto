@@ -1,0 +1,10 @@
+Page 1: Set basic information
+Quotation name: Test Server01
+Country: Spain
+Is U.S. ECCN needed: No
+
+Page 2: Configuration
+UN-R4900-G6-LFF-C			6pcs
+ - UN-CPU-INTEL-4514Y		1pcs
+ - UN-DDR5-5600B-32G-2Rx8-R-2	2pcs
+ - UN-DUMMY-DIMM-DDR5-M	30pcs
