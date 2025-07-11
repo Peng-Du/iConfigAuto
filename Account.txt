@@ -1,2 +1,2 @@
-username：d01054
-password：M67h62J*
+username：<username>
+password：<password>
