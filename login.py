@@ -554,15 +554,21 @@ def main():
                         
                         # 保存配置
                         logging.info("Step 3: Saving configuration...")
-                        try:
-                            save_button = WebDriverWait(driver, 10).until(
-                                EC.element_to_be_clickable((By.ID, "h3c_save_config"))
-                            )
-                            save_button.click()
-                            logging.info("Successfully clicked save button")
-                            time.sleep(2)  # 等待保存完成
-                        except Exception as e:
-                            logging.error(f"Error clicking save button: {e}")
+                        for attempt in range(3):
+                            try:
+                                save_button = WebDriverWait(driver, 10).until(
+                                    EC.element_to_be_clickable((By.ID, "h3c_save_config"))
+                                )
+                                save_button.click()
+                                logging.info("Successfully clicked save button")
+                                time.sleep(2)  # 等待保存完成
+                                break  # Exit loop if successful
+                            except StaleElementReferenceException:
+                                logging.warning(f"Save button became stale. Retrying... (Attempt {attempt + 1})")
+                                time.sleep(1)
+                            except Exception as e:
+                                logging.error(f"Error clicking save button on attempt {attempt + 1}: {e}")
+                                break
                         
                         # 返回主列表
                         logging.info("Step 4: Returning to main list...")
