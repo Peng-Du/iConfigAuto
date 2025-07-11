@@ -234,7 +234,7 @@ def main():
                     continue
             else:
                 logging.warning(f"Product {product_name} has an unknown type. Assuming 'Parts' and proceeding.")
-                if not click_tab_with_retry(driver, wait, "normCfg", "Parts"):
+                if not click_tab_with_retry(driver, wait, "partsCfg", "Parts"):
                     continue
 
             time.sleep(2) # Wait for tab content to load
@@ -432,7 +432,6 @@ def main():
                                     # 2. 根据item_tr_id判断使用弹出菜单还是直接输入
                                     try:
                                         # 尝试弹出菜单方式，如果失败则尝试直接输入
-                                        logging.info(f"'{item_tr_id}' does not contain 'License', trying popup menu first.")
                                         popup_menu_success = False
                                         try:
                                             # 等待弹出菜单出现
